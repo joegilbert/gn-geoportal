@@ -5,7 +5,9 @@ require 'haml'
 
 # run sinatra from the lib directory
 require File.expand_path(File.dirname(__FILE__) + '/lib/sinatra/lib/sinatra')
-
+# retrieve config information
+require File.expand_path(File.dirname(__FILE__) + '/lib/config')
+# Load classes and modules
 require 'lib/geoportal.rb'
 
 # set sinatra's variables
@@ -13,22 +15,16 @@ set :app_file, __FILE__
 set :root, File.dirname(__FILE__)
 set :views, "views"
 
-# set the geonetwork hostname and base page title
-configure do
-	set :host => 'http://lat.lib.virginia.edu',
-			:title => "Scholars' Lab - Geospatial Data Portal"
-end
-
 # helpers for handlers and views
 helpers do
 	def gn_url(lang)
-		options.host + ":8080/geonetwork/srv/" + lang
+		options.host + options.port + "/geonetwork/srv/" + lang
 	end
 	def map_url(wms)
 		options.host + "/geoview?wms=" + wms
 	end
 	def kml_url(layers)
-		options.host + ":8080/geoserver/wms/kml_reflect?layers=" + layers
+		options.host + options.port + "/geoserver/wms/kml_reflect?layers=" + layers
 	end
 end
 
