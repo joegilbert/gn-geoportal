@@ -1,0 +1,55 @@
+%form#geo-search{:name => 'geo-search'}
+	%fieldset.span-16
+		%legend Search for Geospatial Data
+		#results-container
+			.notice 
+				Loading results...
+				%a#back-to-search{:href => 'portal'}
+					Return to Search
+			.loading
+				%img{:src => '/images/ajax-loader.gif' :alt => 'loading' :title => 'loading'}
+		#search-container
+			.search-section.span-16
+				%label.span-16 What
+				%input#kw.text.span-11/
+				%a.button.span-1{:onclick => '$("#geo-search").submit();'} Search
+				%a#adv-link.span-3.last Advanced Search
+			#adv.adv.span-16
+				.search-section.column.span-16
+					.sub.span-5
+						Title
+						%input#ti.text.span-5/
+					.sub.span-5.prepend-1.append-4.last
+						Abstract
+						%input#ab.text.span-5.append-6.last/
+				.search-section.span-16
+					%label.span-16 When
+					%span.span-1 From
+					%input#dfrom.text.span-2{:value => '0'}/
+					%span.span-1.prepend-1 To
+					%input#dto.text.span-2.last{:value => '2020'}/						
+			.search-section.span-16
+				%label.last Where
+				.adv.search-section.span-16
+					%h4.span-16 Bounding box coordinates
+					%span.span-16.push-3.last
+						Lat
+						%input#ur-lat.text.span-1/
+					%span.span-2 
+						Long
+						%input#ll-lon.text.span-1.last/
+					%span.span-12.push-2.last 
+						%input#ur-lon.text.span-1/
+						Long
+					%span.span-16.push-3.last 
+						Lat
+						%input#ll-lat.text.span-1.last/
+				#map.span-16/
+				%input#submit.submit{:type => 'submit', :value => 'Search'}/
+#ft.span-16
+	.about.span-2
+		%a{:href => '/about'} About
+	.byline.span-5.append-8
+		Created by the <a href="http://lib.virginia.edu/scholarslab">Scholars' Lab</a>.
+%script{:type => "text/javascript", :src => 'http://openlayers.org/api/OpenLayers.js'}
+%script{:type => "text/javascript", :src => '/scripts/utils.js'}

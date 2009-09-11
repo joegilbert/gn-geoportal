@@ -1,0 +1,66 @@
+#geo-search
+	%fieldset.span-16
+		%legend= "Metadata Record for Item #{@id}<span class='xml-link'>(<a href='#{@meta_url}'>XML</a>)</span>"
+		#metadata.container.span-16
+			%h2
+				= @doc.title
+			- @meta = Nokogiri::XML(open(@meta_url))
+			- @meta.extend Geoportal::Result
+			- unless(@meta.map_link.nil? && @meta.layers.first.nil?)
+				%h3.success
+					= haml :_utils, :layout => false
+			#kw.column
+				.categories.span-16.last
+					%h3.span-3 Categories
+					- @doc.categories.each do |cat|
+						.span-3
+							= "<a href='/search?q=#{cat.content}&s=1&c=5&dt=3000'>#{cat.content}</a>"
+				.keywords.span-16.last
+					%h3.span-3 Keywords
+					- @doc.keywords.each do |key|
+						.span-3
+							= "<a href='/search?q=#{key.content}&s=1&c=5&dt=3000'>#{key.content}</a>"
+			#extent.column
+				- unless (@doc.time_start).nil?
+					%h3.span-16.last Temporal Extent
+					#time.span-16
+						.extent.span-2=@doc.time_start.content[/(.+)T.+/, 1]
+						.extent.span-1 &hArr;
+						.extent.span-2.last= @doc.time_end.content[/(.+)T.+/, 1]
+				- unless (@doc.north).nil?
+					%h3.span-16.last Geographic Extent
+					.extent.span-16.push-2.last= @doc.north
+					.extent.span-2= @doc.west
+					.extent.span-4.push-2.last= @doc.east
+					.extent.span-16.push-2.last= @doc.south
+			- unless @doc.web_service.first.nil?
+				#services.column
+					%h3.span-16.last Web Services
+					- @doc.web_service.each do |srv|
+						- srv.extend Geoportal::Link
+						.srv.span-15
+							.srv-title.span-15= srv.link_name
+							.srv-desc.span-15= srv.link_url
+			- unless @doc.layers.first.nil?
+				#layers.column
+					%h3.span-16.last Layers
+					- @doc.layers.each do |layer|
+						.layer.span-7
+							= layer.content
+							= "(<a href='#{kml_url(layer.content)}'>KMZ</a>)"
+			#abs.column
+				%h3.span-16.last 
+					Abstract
+				.abs.span-15= @doc.abstract
+			#addrs.column
+				%h3.span-16.last Points of Contact
+				- @doc.contact.each do |addr|
+					- addr.extend Geoportal::Address
+					.addr.span-7
+						- addr.address_line.each do |addrLine|
+							.addr-line.span-6
+								= addrLine.content
+						- addr.address_link.each do |wwwAddr|
+							- wwwAddr.extend Geoportal::Link
+							.addr-line.span-6
+								= "<a href='#{wwwAddr.link_url}'>#{wwwAddr.link_name}</a>"

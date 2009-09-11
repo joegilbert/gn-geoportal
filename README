@@ -1,0 +1,17 @@
+GN-Geoportal is a portal for searching and displaying spatial metadata records in a GeoNetwork catalog (http://geonetwork-opensource.org/).  GN-Geoportal is written in Ruby and employs the Sinatra DSL.
+
+Required gems: nokogiri, haml
+
+To update CSS with Sass:
+gem sources --add http://gems.github.com/
+sudo gem install chriseppstein-compass
+Make changes to src/*.sass then
+cd config
+compass -u
+
+To run the application at http://localhost:4567 via WEBrick, type
+ruby app.rb
+
+A config.ru file is also included for Rack-based deployment.
+
+By Joe Gilbert (joe.gilbert@gmail.com).

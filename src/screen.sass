@@ -1,0 +1,88 @@
+@import base.sass
+ 
++blueprint
+
+!bg_color = #FFFFFF
+!fg_color = #444444
+!link_color = #444488
+!alt_color = #7A7974
+
+.title a
+	:text-decoration none
+	:color #333
+#results
+	.result
+		:margin 0 0 20px
+		.result-title
+			:color = !alt_color
+		.result-desc
+			:margin 5px 0
+		.result-kw
+			:color = !alt_color
+	#back-to-search
+		:margin 0 10px
+		:font-weight bold
+		:cursor pointer
+	#rss a
+		:text-decoration none
+		img
+			:vertical-align middle
+			:padding-right 4px
+#more-link
+	:display block
+	:background = !fg_color
+	:color = !bg_color
+	:border none
+	:text-decoration none
+	:padding 5px
+	:margin 10px 2px
+	:cursor pointer
+	:font-size 14px
+	:text-align center
+	:height 21px
+#more-link:hover
+	:background = !alt_color
+.utils 
+	img
+		:height .8em
+		:padding-left 4px
+	a
+		:text-decoration none
+	.util-link
+		:text-decoration underline
+#results-container
+	:display none
+#geo-search
+	.search-section
+		:padding-bottom 20px
+	label
+		:display block
+		:margin-bottom 10px
+		:font-size 14px
+	label.sub
+		:font-size 12px
+		:font-weight normal
+	#adv-link
+		cursor: pointer
+		margin-left: 5px
+	.adv
+		:display none
+	#submit
+		:display none
+	.button
+		:background = !fg_color
+		:color = !bg_color
+		:border none
+		:text-decoration none
+		:padding 5px
+		:margin 0 2px
+		:cursor pointer
+	.button:hover
+		:background = !alt_color
+	.xml-link
+		:padding-left 10px
+#map
+	:height 400px
+#metadata
+	#kw,#layers,#time,.categories,#abs,#services
+		:margin-bottom 20px

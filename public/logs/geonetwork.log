@@ -1,0 +1,254 @@
+2009-08-30 21:00:56,564 INFO  [jeeves.engine] - === Starting system ========================================
+2009-08-30 21:00:56,564 INFO  [jeeves.engine] - Java version : 14.1-b02-90
+2009-08-30 21:00:56,564 INFO  [jeeves.engine] - Java vendor  : Apple Inc.
+2009-08-30 21:00:56,566 INFO  [jeeves.engine] - === Starting system ========================================
+2009-08-30 21:00:56,567 INFO  [jeeves.engine] - Java version : 14.1-b02-90
+2009-08-30 21:00:56,567 INFO  [jeeves.engine] - Java vendor  : Apple Inc.
+2009-08-30 21:01:00,127 INFO  [jeeves.engine] - XSLT factory : net.sf.saxon.IdentityTransformer
+2009-08-30 21:01:00,127 INFO  [jeeves.engine] - Path    : /opt/local/tomcat/webapps/geonetwork/
+2009-08-30 21:01:00,127 INFO  [jeeves.engine] - BaseURL : geonetwork
+2009-08-30 21:01:00,127 INFO  [jeeves.engine] - Loading : /opt/local/tomcat/webapps/geonetwork/WEB-INF/config.xml
+2009-08-30 21:01:00,131 INFO  [jeeves.engine] - XSLT factory : net.sf.saxon.IdentityTransformer
+2009-08-30 21:01:00,131 INFO  [jeeves.engine] - Path    : /opt/local/tomcat/webapps/geonetwork/
+2009-08-30 21:01:00,131 INFO  [jeeves.engine] - BaseURL : geonetwork
+2009-08-30 21:01:00,131 INFO  [jeeves.engine] - Loading : /opt/local/tomcat/webapps/geonetwork/WEB-INF/config.xml
+2009-08-30 21:01:01,091 INFO  [jeeves.engine] - Initializing general configuration...
+2009-08-30 21:01:01,095 INFO  [jeeves.engine] - Initializing general configuration...
+2009-08-30 21:01:01,098 INFO  [jeeves.engine] - Initializing defaults...
+2009-08-30 21:01:01,098 INFO  [jeeves.engine] -    Default local is :true
+2009-08-30 21:01:01,108 INFO  [jeeves.engine] - Initializing defaults...
+2009-08-30 21:01:01,108 INFO  [jeeves.engine] -    Default local is :true
+2009-08-30 21:01:01,121 INFO  [jeeves.engine] - Initializing resources...
+2009-08-30 21:01:01,121 INFO  [jeeves.engine] -    Adding resource : main-db
+2009-08-30 21:01:01,121 INFO  [jeeves.engine] -       Loading activator  : org.fao.geonet.activators.McKoiActivator
+2009-08-30 21:01:01,123 INFO  [jeeves.engine] - Initializing resources...
+2009-08-30 21:01:01,123 INFO  [jeeves.engine] -    Adding resource : main-db
+2009-08-30 21:01:01,127 INFO  [jeeves.engine] -       Loading activator  : org.fao.geonet.activators.McKoiActivator
+2009-08-30 21:01:01,132 INFO  [jeeves.engine] -       Starting activator : org.fao.geonet.activators.McKoiActivator
+2009-08-30 21:01:01,135 INFO  [jeeves.engine] -       Starting activator : org.fao.geonet.activators.McKoiActivator
+2009-08-30 21:01:05,442 INFO  [jeeves.engine] - Initializing services...
+2009-08-30 21:01:05,443 INFO  [jeeves.engine] -    Adding service : main.home
+2009-08-30 21:01:05,528 INFO  [jeeves.engine] -    Adding service : main.search
+2009-08-30 21:01:05,579 INFO  [jeeves.engine] -    Adding service : main.search.embedded
+2009-08-30 21:01:05,579 INFO  [jeeves.engine] -    Adding service : main.present.embedded
+2009-08-30 21:01:05,580 INFO  [jeeves.engine] -    Adding service : main.searchform.advanced.embedded
+2009-08-30 21:01:05,581 INFO  [jeeves.engine] -    Adding service : main.searchform.simple.embedded
+2009-08-30 21:01:05,581 INFO  [jeeves.engine] -    Adding service : rating.popup
+2009-08-30 21:01:05,581 INFO  [jeeves.engine] -    Adding service : main.present
+2009-08-30 21:01:05,582 INFO  [jeeves.engine] -    Adding service : remote.show
+2009-08-30 21:01:05,584 INFO  [jeeves.engine] -    Adding service : feedback
+2009-08-30 21:01:05,584 INFO  [jeeves.engine] -    Adding service : links
+2009-08-30 21:01:05,584 INFO  [jeeves.engine] -    Adding service : about
+2009-08-30 21:01:05,584 INFO  [jeeves.engine] -    Adding service : xml.region.get
+2009-08-30 21:01:05,600 INFO  [jeeves.engine] -    Adding service : selection.search
+2009-08-30 21:01:05,602 INFO  [jeeves.engine] -    Adding service : feedback.insert
+2009-08-30 21:01:05,614 INFO  [jeeves.engine] -    Adding service : util.ping
+2009-08-30 21:01:05,615 INFO  [jeeves.engine] -    Adding service : util.import
+2009-08-30 21:01:05,626 INFO  [jeeves.engine] -    Adding service : user.list
+2009-08-30 21:01:05,661 INFO  [jeeves.engine] -    Adding service : user.get
+2009-08-30 21:01:05,663 INFO  [jeeves.engine] -    Adding service : user.edit
+2009-08-30 21:01:05,663 INFO  [jeeves.engine] -    Adding service : user.resetpw
+2009-08-30 21:01:05,663 INFO  [jeeves.engine] -    Adding service : user.update
+2009-08-30 21:01:05,674 INFO  [jeeves.engine] -    Adding service : user.remove
+2009-08-30 21:01:05,675 INFO  [jeeves.engine] -    Adding service : user.pwedit
+2009-08-30 21:01:05,675 INFO  [jeeves.engine] -    Adding service : user.pwupdate
+2009-08-30 21:01:05,676 INFO  [jeeves.engine] -    Adding service : user.infoedit
+2009-08-30 21:01:05,676 INFO  [jeeves.engine] -    Adding service : user.infoupdate
+2009-08-30 21:01:05,677 INFO  [jeeves.engine] -    Adding service : user.register.get
+2009-08-30 21:01:05,677 INFO  [jeeves.engine] -    Adding service : user.register.submit
+2009-08-30 21:01:05,785 INFO  [jeeves.engine] -    Adding service : group.list
+2009-08-30 21:01:05,786 INFO  [jeeves.engine] -    Adding service : group.get
+2009-08-30 21:01:05,787 INFO  [jeeves.engine] -    Adding service : group.update
+2009-08-30 21:01:05,792 INFO  [jeeves.engine] -    Adding service : group.remove
+2009-08-30 21:01:05,793 INFO  [jeeves.engine] -    Adding service : xml.group.update
+2009-08-30 21:01:05,793 INFO  [jeeves.engine] -    Adding service : category.list
+2009-08-30 21:01:05,793 INFO  [jeeves.engine] -    Adding service : category.get
+2009-08-30 21:01:05,794 INFO  [jeeves.engine] -    Adding service : category.update
+2009-08-30 21:01:05,799 INFO  [jeeves.engine] -    Adding service : category.remove
+2009-08-30 21:01:05,799 INFO  [jeeves.engine] -    Adding service : xml.category.update
+2009-08-30 21:01:05,800 INFO  [jeeves.engine] -    Adding service : user.login
+2009-08-30 21:01:05,810 INFO  [jeeves.engine] -    Adding service : shib.user.login
+2009-08-30 21:01:05,823 INFO  [jeeves.engine] -    Adding service : user.logout
+2009-08-30 21:01:05,824 INFO  [jeeves.engine] -    Adding service : admin
+2009-08-30 21:01:05,824 INFO  [jeeves.engine] -    Adding service : config
+2009-08-30 21:01:05,835 INFO  [jeeves.engine] -    Adding service : xml.config.get
+2009-08-30 21:01:05,836 INFO  [jeeves.engine] -    Adding service : xml.config.set
+2009-08-30 21:01:05,840 INFO  [jeeves.engine] -    Adding service : localization
+2009-08-30 21:01:05,840 INFO  [jeeves.engine] -    Adding service : xml.operation.update
+2009-08-30 21:01:05,843 INFO  [jeeves.engine] -    Adding service : xml.region.update
+2009-08-30 21:01:05,844 INFO  [jeeves.engine] -    Adding service : help
+2009-08-30 21:01:05,844 INFO  [jeeves.engine] -    Adding service : xml.schema.info
+2009-08-30 21:01:05,854 INFO  [jeeves.engine] -    Adding service : file.disclaimer
+2009-08-30 21:01:05,854 INFO  [jeeves.engine] -    Adding service : file.download
+2009-08-30 21:01:05,854 INFO  [jeeves.engine] -    Adding service : prepare.file.download
+2009-08-30 21:01:05,868 INFO  [jeeves.engine] -    Adding service : graphover.show
+2009-08-30 21:01:05,868 INFO  [jeeves.engine] -    Adding service : resources.get.archive
+2009-08-30 21:01:05,885 INFO  [jeeves.engine] -    Adding service : resources.get
+2009-08-30 21:01:05,894 INFO  [jeeves.engine] -    Adding service : resources.upload
+2009-08-30 21:01:05,895 INFO  [jeeves.engine] -    Adding service : resources.prepare.upload
+2009-08-30 21:01:05,895 INFO  [jeeves.engine] -    Adding service : resources.del
+2009-08-30 21:01:05,901 INFO  [jeeves.engine] -    Adding service : xml.user.login
+2009-08-30 21:01:05,902 INFO  [jeeves.engine] -    Adding service : xml.user.logout
+2009-08-30 21:01:05,902 INFO  [jeeves.engine] -    Adding service : xml.search
+2009-08-30 21:01:05,907 INFO  [jeeves.engine] -    Adding service : xml.metadata.get
+2009-08-30 21:01:05,908 INFO  [jeeves.engine] -    Adding service : xml.info
+2009-08-30 21:01:05,919 INFO  [jeeves.engine] -    Adding service : xml.forward
+2009-08-30 21:01:05,920 INFO  [jeeves.engine] -    Adding service : xml.user.list
+2009-08-30 21:01:05,920 INFO  [jeeves.engine] -    Adding service : xml.usergroups.list
+2009-08-30 21:01:05,937 INFO  [jeeves.engine] -    Adding service : xml.group.list
+2009-08-30 21:01:05,937 INFO  [jeeves.engine] -    Adding service : xml.metadata.insert
+2009-08-30 21:01:05,939 INFO  [jeeves.engine] -    Adding service : xml.metadata.delete
+2009-08-30 21:01:05,949 INFO  [jeeves.engine] -    Adding service : csw
+2009-08-30 21:01:05,950 INFO  [jeeves.engine] -    Adding service : oaipmh
+2009-08-30 21:01:05,950 INFO  [jeeves.engine] -    Adding service : rss.latest
+2009-08-30 21:01:05,951 INFO  [jeeves.engine] -    Adding service : rss.search
+2009-08-30 21:01:05,951 INFO  [jeeves.engine] -    Adding service : rss.present
+2009-08-30 21:01:05,951 INFO  [jeeves.engine] -    Adding service : google.kml
+2009-08-30 21:01:05,951 INFO  [jeeves.engine] -    Adding service : mef.import
+2009-08-30 21:01:05,952 INFO  [jeeves.engine] -    Adding service : mef.export
+2009-08-30 21:01:05,953 INFO  [jeeves.engine] -    Adding service : xml.relation.get
+2009-08-30 21:01:05,953 INFO  [jeeves.engine] -    Adding service : xml.relation.insert
+2009-08-30 21:01:05,954 INFO  [jeeves.engine] -    Adding service : xml.relation.delete
+2009-08-30 21:01:05,955 INFO  [jeeves.engine] -    Adding service : keywords.getselected
+2009-08-30 21:01:05,956 INFO  [jeeves.engine] -    Adding service : keywords.sort
+2009-08-30 21:01:05,958 INFO  [jeeves.engine] -    Adding service : keywords.select
+2009-08-30 21:01:05,968 INFO  [jeeves.engine] -    Adding service : keywords.search
+2009-08-30 21:01:05,969 INFO  [jeeves.engine] -    Adding service : xml.search.keywords
+2009-08-30 21:01:05,969 INFO  [jeeves.engine] -    Adding service : xml.search.keywordlink
+2009-08-30 21:01:05,970 INFO  [jeeves.engine] -    Adding service : keywords.editsearch
+2009-08-30 21:01:05,972 INFO  [jeeves.engine] -    Adding service : thesaurus.admin
+2009-08-30 21:01:05,973 INFO  [jeeves.engine] -    Adding service : thesaurus.upload
+2009-08-30 21:01:05,974 INFO  [jeeves.engine] -    Adding service : thesaurus.download
+2009-08-30 21:01:05,980 INFO  [jeeves.engine] -    Adding service : thesaurus.delete
+2009-08-30 21:01:05,981 INFO  [jeeves.engine] -    Adding service : thesaurus.view
+2009-08-30 21:01:05,981 INFO  [jeeves.engine] -    Adding service : thesaurus.add
+2009-08-30 21:01:05,982 INFO  [jeeves.engine] -    Adding service : thesaurus.edit
+2009-08-30 21:01:05,982 INFO  [jeeves.engine] -    Adding service : thesaurus.update
+2009-08-30 21:01:05,982 INFO  [jeeves.engine] -    Adding service : thesaurus.editelement
+2009-08-30 21:01:06,009 INFO  [jeeves.engine] -    Adding service : thesaurus.addelement
+2009-08-30 21:01:06,010 INFO  [jeeves.engine] -    Adding service : thesaurus.updateelement
+2009-08-30 21:01:06,011 INFO  [jeeves.engine] -    Adding service : thesaurus.deleteelement
+2009-08-30 21:01:06,011 INFO  [jeeves.engine] - Initializing schedules...
+2009-08-30 21:01:06,011 INFO  [jeeves.engine] - Loading : /opt/local/tomcat/webapps/geonetwork/WEB-INF/config-metadata.xml
+2009-08-30 21:01:06,077 INFO  [jeeves.engine] - Initializing services...
+2009-08-30 21:01:06,078 INFO  [jeeves.engine] -    Adding service : metadata.insert.paste
+2009-08-30 21:01:06,078 INFO  [jeeves.engine] -    Adding service : metadata.insert
+2009-08-30 21:01:06,078 INFO  [jeeves.engine] -    Adding service : metadata.show
+2009-08-30 21:01:06,084 INFO  [jeeves.engine] -    Adding service : metadata.show.embedded
+2009-08-30 21:01:06,084 INFO  [jeeves.engine] -    Adding service : metadata.edit
+2009-08-30 21:01:06,085 INFO  [jeeves.engine] -    Adding service : metadata.elem.add
+2009-08-30 21:01:06,086 INFO  [jeeves.engine] -    Adding service : metadata.elem.delete
+2009-08-30 21:01:06,087 INFO  [jeeves.engine] -    Adding service : metadata.update
+2009-08-30 21:01:06,087 INFO  [jeeves.engine] -    Adding service : metadata.update.finish
+2009-08-30 21:01:06,087 INFO  [jeeves.engine] -    Adding service : metadata.update.forget
+2009-08-30 21:01:06,087 INFO  [jeeves.engine] -    Adding service : metadata.update.forgetandfinish
+2009-08-30 21:01:06,087 INFO  [jeeves.engine] -    Adding service : metadata.validate
+2009-08-30 21:01:06,088 INFO  [jeeves.engine] -    Adding service : metadata.elem.down
+2009-08-30 21:01:06,088 INFO  [jeeves.engine] -    Adding service : metadata.elem.up
+2009-08-30 21:01:06,088 INFO  [jeeves.engine] -    Adding service : metadata.attr.add
+2009-08-30 21:01:06,089 INFO  [jeeves.engine] -    Adding service : metadata.attr.delete
+2009-08-30 21:01:06,091 INFO  [jeeves.engine] -    Adding service : metadata.delete
+2009-08-30 21:01:06,091 INFO  [jeeves.engine] -    Adding service : metadata.recent.additions.embedded
+2009-08-30 21:01:06,091 INFO  [jeeves.engine] -    Adding service : metadata.massive.delete
+2009-08-30 21:01:06,094 INFO  [jeeves.engine] -    Adding service : metadata.massive.newowner
+2009-08-30 21:01:06,095 INFO  [jeeves.engine] -    Adding service : metadata.massive.newowner.form
+2009-08-30 21:01:06,096 INFO  [jeeves.engine] -    Adding service : metadata.massive.category.form
+2009-08-30 21:01:06,098 INFO  [jeeves.engine] -    Adding service : metadata.massive.update.categories
+2009-08-30 21:01:06,106 INFO  [jeeves.engine] -    Adding service : metadata.massive.admin.form
+2009-08-30 21:01:06,107 INFO  [jeeves.engine] -    Adding service : metadata.massive.update.privileges
+2009-08-30 21:01:06,107 INFO  [jeeves.engine] -    Adding service : metadata.massive.processing
+2009-08-30 21:01:06,108 INFO  [jeeves.engine] -    Adding service : metadata.select
+2009-08-30 21:01:06,109 INFO  [jeeves.engine] -    Adding service : metadata.create.form
+2009-08-30 21:01:06,110 INFO  [jeeves.engine] -    Adding service : metadata.duplicate.form
+2009-08-30 21:01:06,110 INFO  [jeeves.engine] -    Adding service : metadata.create
+2009-08-30 21:01:06,111 INFO  [jeeves.engine] -    Adding service : metadata.admin.index.rebuild
+2009-08-30 21:01:06,111 INFO  [jeeves.engine] -    Adding service : metadata.admin.form
+2009-08-30 21:01:06,113 INFO  [jeeves.engine] -    Adding service : metadata.massive.admin.form
+2009-08-30 21:01:06,113 INFO  [jeeves.engine] -    Adding service : metadata.admin
+2009-08-30 21:01:06,117 INFO  [jeeves.engine] -    Adding service : metadata.category.form
+2009-08-30 21:01:06,118 INFO  [jeeves.engine] -    Adding service : metadata.category
+2009-08-30 21:01:06,118 INFO  [jeeves.engine] -    Adding service : metadata.xmlinsert.form
+2009-08-30 21:01:06,119 INFO  [jeeves.engine] -    Adding service : metadata.batchimport.form
+2009-08-30 21:01:06,119 INFO  [jeeves.engine] -    Adding service : metadata.searchunused.form
+2009-08-30 21:01:06,120 INFO  [jeeves.engine] -    Adding service : metadata.searchunused
+2009-08-30 21:01:06,120 INFO  [jeeves.engine] -    Adding service : metadata.thumbnail.form
+2009-08-30 21:01:06,121 INFO  [jeeves.engine] -    Adding service : metadata.thumbnail.set
+2009-08-30 21:01:06,124 INFO  [jeeves.engine] -    Adding service : metadata.thumbnail.unset
+2009-08-30 21:01:06,125 INFO  [jeeves.engine] -    Adding service : transfer.ownership
+2009-08-30 21:01:06,125 INFO  [jeeves.engine] -    Adding service : xml.ownership.editors
+2009-08-30 21:01:06,131 INFO  [jeeves.engine] -    Adding service : xml.ownership.groups
+2009-08-30 21:01:06,132 INFO  [jeeves.engine] -    Adding service : xml.ownership.transfer
+2009-08-30 21:01:06,133 INFO  [jeeves.engine] -    Adding service : xml.metadata.rate
+2009-08-30 21:01:06,135 INFO  [jeeves.engine] - Loading : /opt/local/tomcat/webapps/geonetwork/WEB-INF/config-harvesting.xml
+2009-08-30 21:01:06,150 INFO  [jeeves.engine] - Initializing services...
+2009-08-30 21:01:06,150 INFO  [jeeves.engine] -    Adding service : harvesting
+2009-08-30 21:01:06,150 INFO  [jeeves.engine] -    Adding service : xml.harvesting.get
+2009-08-30 21:01:06,151 INFO  [jeeves.engine] -    Adding service : xml.harvesting.add
+2009-08-30 21:01:06,152 INFO  [jeeves.engine] -    Adding service : xml.harvesting.update
+2009-08-30 21:01:06,157 INFO  [jeeves.engine] -    Adding service : xml.harvesting.remove
+2009-08-30 21:01:06,159 INFO  [jeeves.engine] -    Adding service : xml.harvesting.start
+2009-08-30 21:01:06,159 INFO  [jeeves.engine] -    Adding service : xml.harvesting.stop
+2009-08-30 21:01:06,168 INFO  [jeeves.engine] -    Adding service : xml.harvesting.run
+2009-08-30 21:01:06,169 INFO  [jeeves.engine] -    Adding service : xml.harvesting.info
+2009-08-30 21:01:06,208 INFO  [jeeves.engine] - Loading : /opt/local/tomcat/webapps/geonetwork/WEB-INF/config-portal.xml
+2009-08-30 21:01:06,246 INFO  [jeeves.engine] - Initializing services...
+2009-08-30 21:01:06,246 INFO  [jeeves.engine] -    Adding service : portal.search
+2009-08-30 21:01:06,246 INFO  [jeeves.engine] -    Adding service : portal.opensearch
+2009-08-30 21:01:06,246 INFO  [jeeves.engine] -    Adding service : portal.search.keywords
+2009-08-30 21:01:06,246 INFO  [jeeves.engine] -    Adding service : portal.present
+2009-08-30 21:01:06,246 INFO  [jeeves.engine] -    Adding service : portal.search.present
+2009-08-30 21:01:06,248 INFO  [jeeves.engine] -    Adding service : portal.get
+2009-08-30 21:01:06,248 INFO  [jeeves.engine] -    Adding service : portal.full
+2009-08-30 21:01:06,248 INFO  [jeeves.engine] -    Adding service : portal.latest.updated
+2009-08-30 21:01:06,248 INFO  [jeeves.engine] -    Adding service : portal.featured
+2009-08-30 21:01:06,248 INFO  [jeeves.engine] -    Adding service : portal.categories
+2009-08-30 21:01:06,248 INFO  [jeeves.engine] -    Adding service : portal.sources
+2009-08-30 21:01:06,248 INFO  [jeeves.engine] -    Adding service : pdf.search
+2009-08-30 21:01:06,248 INFO  [jeeves.engine] - Loading : /opt/local/tomcat/webapps/geonetwork/WEB-INF/config-export.xml
+2009-08-30 21:01:06,260 INFO  [jeeves.engine] - Initializing services...
+2009-08-30 21:01:06,260 INFO  [jeeves.engine] -    Adding service : dc.xml
+2009-08-30 21:01:06,260 INFO  [jeeves.engine] -    Adding service : fgdc.xml
+2009-08-30 21:01:06,260 INFO  [jeeves.engine] -    Adding service : iso19115to19139.xml
+2009-08-30 21:01:06,260 INFO  [jeeves.engine] -    Adding service : iso19139.xml
+2009-08-30 21:01:06,260 INFO  [jeeves.engine] -    Adding service : iso_arccatalog8.xml
+2009-08-30 21:01:06,260 INFO  [jeeves.engine] - Loading : /opt/local/tomcat/webapps/geonetwork/WEB-INF/config-test.xml
+2009-08-30 21:01:06,307 INFO  [jeeves.engine] - Initializing services...
+2009-08-30 21:01:06,307 INFO  [jeeves.engine] -    Adding service : test.i18n
+2009-08-30 21:01:06,307 INFO  [jeeves.engine] -    Adding service : test.i18n.xml
+2009-08-30 21:01:06,308 INFO  [jeeves.engine] -    Adding service : test.csw
+2009-08-30 21:01:06,308 INFO  [jeeves.engine] - Loading : /opt/local/tomcat/webapps/geonetwork/WEB-INF/config-csw.xml
+2009-08-30 21:01:06,349 INFO  [jeeves.engine] - Initializing profiles...
+2009-08-30 21:01:06,369 INFO  [jeeves.engine] - Found handler : org.fao.geonet.Geonetwork
+2009-08-30 21:01:06,375 INFO  [jeeves.engine] - --- Starting handler --------------------------------------
+2009-08-30 21:01:06,375 INFO  [jeeves.apphand] - Initializing geonetwork...
+2009-08-30 21:01:06,375 INFO  [jeeves.apphand] -   - Setting manager...
+2009-08-30 21:01:06,474 INFO  [jeeves.apphand] -   - Thesaurus...
+2009-08-30 21:01:08,420 INFO  [jeeves.apphand] -   - Z39.50...
+2009-08-30 21:01:08,421 INFO  [jeeves.apphand] -      Enabled. Schema mappings is : schema-mappings.xml
+2009-08-30 21:01:08,908 INFO  [jeeves.apphand] -   - Search...
+2009-08-30 21:01:16,502 INFO  [jeeves.apphand] -   - Access manager...
+2009-08-30 21:01:16,550 INFO  [jeeves.apphand] -   - Data manager...
+2009-08-30 21:01:16,687 INFO  [jeeves.apphand] -     Adding xml schema : csw-record
+2009-08-30 21:01:17,130 INFO  [jeeves.apphand] -     Adding xml schema : dublin-core
+2009-08-30 21:01:17,373 INFO  [jeeves.apphand] -     Adding xml schema : fgdc-std
+2009-08-30 21:01:17,977 INFO  [jeeves.apphand] -     Adding xml schema : iso19115
+2009-08-30 21:01:18,555 INFO  [jeeves.apphand] -     Adding xml schema : iso19139
+2009-08-30 21:01:21,757 INFO  [jeeves.apphand] -   - Harvest manager...
+2009-08-30 21:01:22,068 INFO  [jeeves.apphand] -   - Catalogue services for the web...
+2009-08-30 21:01:22,482 INFO  [jeeves.apphand] -   - Open Archive Initiative (OAI-PMH) server...
+2009-08-30 21:01:22,667 INFO  [jeeves.apphand] - Site ID is : cbc0b275-5150-41e8-bcb6-fe389d30c150
+2009-08-30 21:01:22,707 INFO  [jeeves.engine] - --- Handler started ---------------------------------------
+2009-08-30 21:01:22,707 INFO  [jeeves.engine] - Starting schedule manager...
+2009-08-30 21:01:22,708 INFO  [jeeves.engine] - Memory used is  : 13166 Kb
+2009-08-30 21:01:22,708 INFO  [jeeves.engine] - Total memory is : 83392 Kb
+2009-08-30 21:01:22,711 INFO  [jeeves.engine] - Startup time is : 26 (secs)
+2009-08-30 21:01:22,711 INFO  [jeeves.engine] - === System working =========================================
+2009-08-30 21:01:30,826 INFO  [jeeves.engine] - === Stopping system ========================================
+2009-08-30 21:01:30,827 INFO  [jeeves.engine] - Stopping schedule manager...
+2009-08-30 21:01:30,827 INFO  [jeeves.engine] - Stopping handlers...
+2009-08-30 21:01:30,827 INFO  [jeeves.apphand] - Stopping geonetwork...
+2009-08-30 21:01:30,828 INFO  [jeeves.apphand] -   - search...
+2009-08-30 21:01:31,078 INFO  [jeeves.apphand] -   - Z39.50...
+2009-08-30 21:01:31,086 INFO  [jeeves.engine] - Stopping resources...
+2009-08-30 21:01:31,138 INFO  [jeeves.engine] -    Stopping activator : org.fao.geonet.activators.McKoiActivator
+2009-08-30 21:01:32,690 INFO  [jeeves.engine] - === System stopped ========================================

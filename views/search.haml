@@ -1,0 +1,30 @@
+#geo-search
+	%fieldset.span-16
+		%legend Search for Geospatial Data
+		#results
+			#search-title.success.span-15
+				= "<div class='span-12'>Search for <strong>'#{unescape(@search.query)}'</strong> returned <span id='hits'>#{@search.hits}</span> results. <a id='back-to-search' href='/'>Return to search</a></div><div id='rss' class='span-2'><a href='#{gn_url('en')}/rss.search?any=#{@search.query}&#{@search.search_str}'><img src='/images/feed.png'/>Feed</a></div>"
+			- if(@search.hits == 0)
+				.notice.span-15 No results found.
+			- else
+				- @doc.xpath('.//metadata')[(@search.start - 1)..(@search.end - 1)].each do |item|
+					- @item_id = item.xpath('.//id').first.content
+					- @meta = Nokogiri::XML(open(@meta_url + @item_id))
+					- @meta.extend Geoportal::Result
+					.result
+						.result-title
+							%a{:href => "/item/#{@item_id}"}
+								-unless @meta.title.nil?
+									= @meta.title.content
+						.result-desc
+							Keywords:
+							- @meta.description.each do |kw|
+								%span.result-kw
+									= kw.content
+						- unless(@meta.map_link.nil? && @meta.layers.first.nil?)
+							= haml :_utils, :layout => false
+		#page-nav
+			- unless((@search.start+@search.count) >= @search.hits)
+				%a#more-link{:href =>"/search?q=#{@search.query}&s=#{@search.start+@search.count}&c=#{@search.count}&#{@search.search_str}"}
+					View more results
+%script{:type => "text/javascript", :src => '/scripts/search.js'}
