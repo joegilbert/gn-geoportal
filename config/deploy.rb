@@ -1,5 +1,5 @@
-set :application, "geoportal"
-set :repository,  "https://subversion.lib.virginia.edu/repos/slab_rd/geoportal"
+set :application, "gn-geoportal"
+set :repository,  "git://github.com/joegilbert/gn-geoportal.git"
 
 # If you have previously been relying upon the code to start, stop 
 # and restart your mongrel application, or if you rely on the database
@@ -26,7 +26,7 @@ set :repository,  "https://subversion.lib.virginia.edu/repos/slab_rd/geoportal"
 
 # If you aren't using Subversion to manage your source code, specify
 # your SCM below:
-# set :scm, :subversion
+set :scm, :git
 # see a full list by running "gem contents capistrano | grep 'scm/'"
 
 role :web, "your web-server here"

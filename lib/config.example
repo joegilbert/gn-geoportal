@@ -1,0 +1,6 @@
+# set the geonetwork hostname, port, and base page title
+configure do
+	set :host_name => 'http://example.com',
+			:port_num => ':8080',
+			:title => "Geoportal"
+end

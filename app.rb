@@ -18,13 +18,13 @@ set :views, "views"
 # helpers for handlers and views
 helpers do
 	def gn_url(lang)
-		options.host + options.port + "/geonetwork/srv/" + lang
+		options.host_name + options.port_num + "/geonetwork/srv/" + lang
 	end
 	def map_url(wms)
-		options.host + "/geoview?wms=" + wms
+		options.host_name + "/geoview?wms=" + wms
 	end
 	def kml_url(layers)
-		options.host + options.port + "/geoserver/wms/kml_reflect?layers=" + layers
+		options.host_name + options.port_num + "/geoserver/wms/kml_reflect?layers=" + layers
 	end
 end
 
