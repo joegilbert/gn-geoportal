@@ -31,7 +31,6 @@ module Geoportal
 		def find()
 
 			search_url = @url + "/xml.search?any=" + @query + '&relation=overlaps&' + @search_str
-			puts search_url
 			doc = Nokogiri::XML(open(search_url))
 			
 			return doc
