@@ -9,7 +9,7 @@ role :app, "your app-server here"                          # This may be the sam
 role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
 role :db,  "your slave db-server here"
 
-# If you are using Passenger mod_rails uncomment this:
+# If you are using Passenger mod_rails uncomment the following block:
 # if you're still using the script/reapear helper you will need
 # these http://github.com/rails/irs_process_scripts
 
