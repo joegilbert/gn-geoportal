@@ -40,5 +40,12 @@ To update GN-Geoportal sources in your project in the future, use
 
 	cd gn-geoportal
 	git pull
+	
+=== Updating Sinatra
+
+To update Sinatra in the future
+
+	cd lib/sinatra
+	git pull
 
 This work is licensed under the Apache License, Version 2.0.  See LICENSE for more details.
