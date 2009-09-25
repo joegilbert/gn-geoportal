@@ -1,6 +1,6 @@
 = GN-Geoportal
 
-GN-Geoportal is a portal for searching and displaying spatial metadata records in a GeoNetwork catalog (http://geonetwork-opensource.org/).  GN-Geoportal is written in Ruby and employs the Sinatra DSL (http://www.sinatrarb.com/).  These instructions assume you have access to an instance of GeoNetwork running locally or remotely.
+GN-Geoportal is a portal for searching and displaying spatial metadata records in a {GeoNetwork catalog }[http://geonetwork-opensource.org/].  GN-Geoportal is written in Ruby and employs the {Sinatra DSL}[http://www.sinatrarb.com/].  These instructions assume you have access to an instance of GeoNetwork running locally or remotely.
 
 == INSTALLATION
 
@@ -11,7 +11,7 @@ First install the required gems:
 
 == CONFIGURATION
 
-The Geonetwork hostname, URL, and title are set in lib/config.rb.  A config.example file is included.  You likely will also want to edit the helpers in app.rb to point to any interactive map (WMS-based) or KML/KMZ link locations.
+The Geonetwork hostname, URL, and title are set in <tt>lib/config.rb</tdd>.  A config.example file is included.  You likely will also want to edit the helpers in app.rb to point to any interactive map (WMS-based) or KML/KMZ link locations.
 
 == RUNNING GN-GEOPORTAL
 
@@ -27,11 +27,18 @@ The default Rack address is http://localhost:9292.
 
 == EDITING STYLES
 
-The HTML and CSS used by GN-Geoportal are generated using Haml (http://haml-lang.com/) and Sass (http://sass-lang.com/) and build upon the Blueprint CSS framework (http://www.blueprintcss.org/).
+The HTML and CSS used by GN-Geoportal are generated using {Haml}[http://haml-lang.com/] and {Sass}[http://sass-lang.com/] and build upon the {Blueprint CSS framework}[http://www.blueprintcss.org/].
 
-Rather than directly editing GN-Geoportal's CSS files, make changes to src/*.sass and regenerate the CSS with Compass (http://compass-style.org/) using the configuration in config/config.rb:
+Rather than directly editing GN-Geoportal's CSS files, make changes to src/*.sass and regenerate the CSS with {Compass}[http://compass-style.org/] using the configuration in <tt>config/config.rb</tt>:
 
 	cd config
 	compass -u
+	
+== Updating
+
+To update GN-Geoportal sources in your project in the future, use
+
+	cd gn-geoportal
+	git pull
 
 This work is licensed under the Apache License, Version 2.0.  See LICENSE for more details.
