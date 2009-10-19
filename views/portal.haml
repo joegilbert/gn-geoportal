@@ -7,11 +7,11 @@
 				%a#back-to-search{:href => 'portal'}
 					Return to Search
 			.loading
-				%img{:src => '/images/ajax-loader.gif' :alt => 'loading' :title => 'loading'}
+				%img(src = '/images/ajax-loader.gif' alt = 'loading' title = 'loading')
 		#search-container
 			.search-section.span-16
 				%label.span-16 What
-				%input#kw.text.span-11/
+				%input#kw.text.span-11
 				%a.button.span-1{:onclick => '$("#geo-search").submit();'} Search
 				%a#adv-link.span-3.last Advanced Search
 			#adv.adv.span-16

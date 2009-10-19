@@ -4,7 +4,7 @@
 		%span.map-link
 			%a{:href => "#{map_url(@meta.map_link.content)}"}
 				%span.util-link Browser
-				%img{:src => '/images/browser.png'}/
+				%img(src = '/images/browser.png')/
 		&nbsp;&nbsp;|&nbsp;&nbsp;
 	- unless @meta.layers.first.nil?
 		%span.kml-link
