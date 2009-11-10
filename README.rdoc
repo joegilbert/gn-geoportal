@@ -9,6 +9,8 @@ First install the required gems:
 	gem sources --add http://gems.github.com/
 	sudo gem install nokogiri haml chriseppstein-compass
 
+	Nokogiri has quite a few dependencies.  On Ubuntu, try installing ruby-dev, libxml2, libxml2-dev, libxslt-ruby, and libxslt-dev.
+
 == CONFIGURATION
 
 The Geonetwork hostname, URL, and title are set in <tt>lib/config.rb</tdd>.  A config.example file is included.  You likely will also want to edit the helpers in app.rb to point to any interactive map (WMS-based) or KML/KMZ link locations.
