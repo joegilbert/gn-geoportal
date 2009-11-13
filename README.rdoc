@@ -9,7 +9,7 @@ First install the required gems:
 	gem sources --add http://gems.github.com/
 	sudo gem install nokogiri haml chriseppstein-compass
 
-	Nokogiri has quite a few dependencies.  On Ubuntu, try installing ruby-dev, libxml2, libxml2-dev, libxslt-ruby, and libxslt-dev.
+Nokogiri has quite a few dependencies.  On Ubuntu, try installing ruby-dev, libxml2, libxml2-dev, libxslt-ruby, and libxslt-dev.
 
 == CONFIGURATION
 
