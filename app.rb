@@ -26,6 +26,12 @@ helpers do
 	def kml_url(layers)
 		options.host_name + options.port_num + "/geoserver/wms/kml_reflect?layers=" + layers
 	end
+	def content_url(layers, format, styles)
+		options.host_name + options.port_num + "/geoserver/wms/reflect?layers=" + layers + "&format=" + format + "&styles=" + styles + "&width=580&height=450"
+	end
+	def cat_url(item)
+		options.catalog + item
+	end
 end
 
 #

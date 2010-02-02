@@ -57,6 +57,10 @@ module Geoportal
 			xpath('.//gmd:onLine/gmd:CI_OnlineResource[contains(./gmd:protocol/gco:CharacterString,"WMS-1.1.1-http-get-capabilities")]/gmd:name/gco:CharacterString')
 		end
 		
+		def catalog_link
+			xpath('.//gmd:offLine//gmd:mediumNote/gco:CharacterString').first
+		end
+		
 	end
 	
 	module Item
@@ -101,12 +105,9 @@ module Geoportal
 			xpath('.//gmd:onLine/gmd:CI_OnlineResource[contains(./gmd:protocol/gco:CharacterString,"get-map") or contains(./gmd:protocol/gco:CharacterString,"WFS")]')
 		end
 		
-		def web_service_name
-			xpath('.//gmd:name/gco:CharacterString').first.content
-		end
-		
-		def web_service_link
-			xpath('.//gmd:linkage/gmd:URL').first.content
+
+		def download
+			xpath('.//gmd:onLine/gmd:CI_OnlineResource[contains(./gmd:protocol/gco:CharacterString,"download")]')
 		end
 		
 		def layers
@@ -114,7 +115,7 @@ module Geoportal
 		end
 		
 		def abstract
-			xpath('.//gmd:abstract/gco:CharacterString').first.content.gsub(/[\*]+/x,'<br/>').gsub(/\/\//,'')
+			xpath('.//gmd:abstract/gco:CharacterString').first.content.gsub(/\*[ ]*\/\/[ ]*\*/,'<br/>').gsub(/\*as is\*/,'<strong>as is</strong>').gsub(/\*/,'<br/>&bull; ')
 		end
 		
 		def contact
@@ -124,6 +125,10 @@ module Geoportal
 	end
 	
 	module Address
+		
+		def role
+			xpath('.//gmd:role/gmd:CI_RoleCode/@codeListValue').first.content.gsub(/([A-Z])/,' \1').capitalize
+		end
 		
 		def address_line
 			xpath('.//gco:CharacterString[not(../../../gmd:CI_OnlineResource)]')
@@ -143,6 +148,10 @@ module Geoportal
 		
 		def link_name
 			xpath('./gmd:name/gco:CharacterString').first.content
+		end
+		
+		def link_desc
+			xpath('.//gmd:description/gco:CharacterString').first.content
 		end
 		
 	end 

@@ -1,0 +1,14 @@
+fieldset { margin-left: 30px; border: none; }
+fieldset a:hover { background: none; }
+
+.container { max-width: 770px; font-family: Helvetica Neue,Arial,Helvetica,sans-serif !important; }
+
+h1 { width: 710px; }
+
+legend { display: none; }
+
+#sectName { background: transparent url('http://www2.lib.virginia.edu/scholarslab/images/slabname.png') no-repeat scroll 0 0; padding-bottom: 20px; }
+
+#subContent1 h2 { font-size: 85%; text-transform: uppercase; font-weight: bold; letter-spacing: 0.15em; }
+
+#ft { display: none; }

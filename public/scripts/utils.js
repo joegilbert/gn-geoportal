@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	$(".wherebox").colorbox({width:"30%", inline:true, href:"#wherebox", transition: 'none', opacity: '0.3'});
+	$(".whatbox").colorbox({width:"30%", inline:true, href:"#whatbox", transition: 'none', opacity: '0.3'});
+	$(".whenbox").colorbox({width:"30%", inline:true, href:"#whenbox", transition: 'none', opacity: '0.3'});
 	$('#adv-link').click(function() {
 		$('.adv').toggle('normal');
 	});
@@ -29,7 +32,12 @@ $(document).ready(function() {
 		displayProjection: new OpenLayers.Projection("EPSG:4326")
 	});
 
-	var osm = new OpenLayers.Layer.OSM("OSM");
+	/* var osm = new OpenLayers.Layer.OSM("OSM"); */
+	var cloudmade = new OpenLayers.Layer.CloudMade("CloudMade", {
+		key: 'BC9A493B41014CAABB98F0471D759707',
+		styleId: 3417
+	});
+	
 	var mrk = new OpenLayers.Layer.Boxes('Bbox marker');
 	var control = new OpenLayers.Control();
 	OpenLayers.Util.extend(control, {
@@ -60,7 +68,7 @@ $(document).ready(function() {
 		}
 	});
 
-    map.addLayers([osm, mrk]);
+    map.addLayers([cloudmade, mrk]);
 	map.addControl(control);
     map.setCenter(new OpenLayers.LonLat(lon, lat), zoom);
     map.addControl( new OpenLayers.Control.MousePosition() );

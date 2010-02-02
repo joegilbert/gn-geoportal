@@ -13,12 +13,12 @@
 				.categories.span-16.last
 					%h3.span-3 Categories
 					- @doc.categories.each do |cat|
-						.span-3
+						.span-4
 							= "<a href='/search?q=#{cat.content}&s=1&c=5&dt=3000'>#{cat.content}</a>"
 				.keywords.span-16.last
 					%h3.span-3 Keywords
 					- @doc.keywords.each do |key|
-						.span-3
+						.span-4
 							= "<a href='/search?q=#{key.content}&s=1&c=5&dt=3000'>#{key.content}</a>"
 			#extent.column
 				- unless (@doc.time_start).nil?
@@ -33,6 +33,13 @@
 					.extent.span-2= @doc.west
 					.extent.span-4.push-2.last= @doc.east
 					.extent.span-16.push-2.last= @doc.south
+				- unless @doc.layers.first.nil?
+					#layers.column
+						%h3.span-16.last Layers
+						- @doc.layers.each do |layer|
+							.layer.span-8.last
+								= layer.content
+								= "(<a href='#{content_url(layer.content, 'openlayers', '')}' class='colorbox' title='#{layer.content}'>Browser</a>, <a href='#{kml_url(layer.content)}'>KML</a>)"
 			- unless @doc.web_service.first.nil?
 				#services.column
 					%h3.span-16.last Web Services
@@ -40,14 +47,15 @@
 						- srv.extend Geoportal::Link
 						.srv.span-15
 							.srv-title.span-15= srv.link_name
-							.srv-desc.span-15= srv.link_url
-			- unless @doc.layers.first.nil?
-				#layers.column
-					%h3.span-16.last Layers
-					- @doc.layers.each do |layer|
-						.layer.span-7
-							= layer.content
-							= "(<a href='#{kml_url(layer.content)}'>KMZ</a>)"
+							.srv-desc.span-15= "<a href='#{srv.link_url}'>#{srv.link_url}</a>"
+			- unless @doc.download.first.nil?
+				#downloads.column
+					%h3.span-16.last Downloads
+					- @doc.download.each do |dl|
+						- dl.extend Geoportal::Link
+						.srv.span-15
+							.srv-desc.span-15= "<a href='#{dl.link_url}'>#{dl.link_name}</a>"
+							.srv-title.span-15= dl.link_desc
 			#abs.column
 				%h3.span-16.last 
 					Abstract
@@ -57,6 +65,9 @@
 				- @doc.contact.each do |addr|
 					- addr.extend Geoportal::Address
 					.addr.span-7
+						.addr-line.span-6
+							%strong
+								= addr.role
 						- addr.address_line.each do |addrLine|
 							.addr-line.span-6
 								= addrLine.content
@@ -64,3 +75,5 @@
 							- wwwAddr.extend Geoportal::Link
 							.addr-line.span-6
 								= "<a href='#{wwwAddr.link_url}'>#{wwwAddr.link_name}</a>"
+%script{:type => "text/javascript", :src =>"../scripts/jquery.colorbox-min.js"}
+%script{:type => "text/javascript", :src =>"../scripts/item.js"}

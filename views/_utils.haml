@@ -4,7 +4,7 @@
 		%span.map-link
 			%a{:href => "#{map_url(@meta.map_link.content)}"}
 				%span.util-link Browser
-				%img(src = '/images/browser.png')/
+				%img{:src => '/images/browser.png'}/
 		&nbsp;&nbsp;|&nbsp;&nbsp;
 	- unless @meta.layers.first.nil?
 		%span.kml-link
@@ -12,3 +12,9 @@
 			- @meta.layers.each do |lyr|
 				- @layers = @layers + lyr.content + ','
 			= "<a href='#{kml_url(@layers.chop)}'><span class='util-link'>Google Earth (KMZ)</span><img src='/images/ge.gif'/></a>"
+	- unless @meta.catalog_link.nil?
+		&nbsp;&nbsp;|&nbsp;&nbsp;
+		%span.cat-link
+			%a{:href => "#{cat_url(@meta.catalog_link.content)}"}
+				%span.util-link VirgoBeta
+				%img{:src => '/images/browser.png'}/

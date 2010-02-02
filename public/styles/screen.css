@@ -388,7 +388,7 @@ input.span-24, textarea.span-24, select.span-24 { width: 950px !important; }
 
 .append-bottom { margin-bottom: 1.5em; }
 
-.showgrid { background: url('/../public/images/grid.png?1252507956'); }
+.showgrid { background: url('/../public/images/grid.png?1252601036'); }
 
 .error { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; }
 .error a { color: #8a1f11; }
@@ -430,6 +430,8 @@ input.text, input.title { width: 300px; }
 
 textarea { width: 390px; height: 250px; }
 
+div.container { width: 700px; margin: 30px auto; overflow: visible; }
+
 .title a { text-decoration: none; color: #333; }
 
 #results .result { margin: 0 0 20px; }
@@ -444,7 +446,7 @@ textarea { width: 390px; height: 250px; }
 
 #more-link:hover { background: #7a7974; }
 
-.utils img { height: .8em; padding-left: 4px; }
+.utils img { height: .8em; padding-left: 4px; vertical-align: middle; }
 .utils a { text-decoration: none; }
 .utils .util-link { text-decoration: underline; }
 
@@ -452,14 +454,17 @@ textarea { width: 390px; height: 250px; }
 
 #geo-search .search-section { padding-bottom: 20px; }
 #geo-search label { display: block; margin-bottom: 10px; font-size: 14px; }
-#geo-search label.sub { font-size: 12px; font-weight: normal; }
+#geo-search label img { vertical-align: middle; padding-left: 15px; float: right; }
+#geo-search label .sub { font-size: 12px; font-weight: normal; }
 #geo-search #adv-link { cursor: pointer; margin-left: 5px; }
 #geo-search .adv { display: none; }
 #geo-search #submit { display: none; }
 #geo-search .button { background: #444444; color: white; border: none; text-decoration: none; padding: 5px; margin: 0 2px; cursor: pointer; }
 #geo-search .button:hover { background: #7a7974; }
 #geo-search .xml-link { padding-left: 10px; }
+#geo-search #whatbox, #geo-search #wherebox, #geo-search #whenbox { display: none; }
 
 #map { height: 400px; }
+#map #map_OpenLayers_Container { z-index: 101 !important; }
 
-#metadata #kw, #metadata #layers, #metadata #time, #metadata .categories, #metadata #abs, #metadata #services { margin-bottom: 20px; }
+#metadata #kw, #metadata #layers, #metadata #time, #metadata .categories, #metadata #abs, #metadata #services, #metadata #downloads { margin-bottom: 20px; }

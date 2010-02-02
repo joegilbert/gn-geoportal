@@ -2,10 +2,12 @@ GN-Geoportal is a portal for searching and displaying spatial metadata records i
 
 INSTALLATION
 
-First install the required gems: 
+First install the required gems (requires RubyGems 1.3 or higher):
 
 gem sources --add http://gems.github.com/
-sudo gem install nokogiri haml chriseppstein-compass
+sudo gem install rack rack-test nokogiri haml chriseppstein-compass
+
+If the installation of Nokogiri fails, make sure you have the Ruby development package installed (ruby-devel in Fedora or ruby-dev in Ubuntu).
 
 CONFIGURATION
 
