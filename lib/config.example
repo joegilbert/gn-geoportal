@@ -2,5 +2,6 @@
 configure do
 	set :host_name => 'http://example.com',
 			:port_num => ':8080',
-			:title => "Geoportal"
+			:title => "Geoportal",
+			:catalog => 'http://example.com'
 end
