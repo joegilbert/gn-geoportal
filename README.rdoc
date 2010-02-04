@@ -6,10 +6,16 @@ GN-Geoportal is a portal for searching and displaying spatial metadata records i
 
 First install the required gems: 
 
-	gem sources --add http://gems.github.com/
-	sudo gem install nokogiri haml chriseppstein-compass
+	sudo gem install nokogiri haml compass
 
 Nokogiri has quite a few dependencies.  On Ubuntu, try installing ruby-dev, libxml2, libxml2-dev, libxslt-ruby, and libxslt-dev.
+
+Next, install the Sinatra framework (using the Sinatra gem may also suffice)L
+
+	cd /path/to/gn-geoportal/lib
+	git clone git://github.com/bmizerany/sinatra.git
+	rm -rf sinatra/.git
+	rm sinatra/.gitignore
 
 == CONFIGURATION
 
