@@ -57,3 +57,7 @@ To update Sinatra in the future
 	git pull
 
 This work is licensed under the Apache License, Version 2.0.  See LICENSE for more details.
+
+== Deployment
+
+The gn-geoportal app may be deployed multiple ways. If you are wanting to deploy this to the same hardware as Geonetwork, you may use the warbler gem to generate a war file to deploy the application as a Java servlet. If you have Phusion Passenger (mod_rails), you will able to deploy with minimal configuration.
