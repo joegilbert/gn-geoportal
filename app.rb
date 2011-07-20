@@ -42,7 +42,7 @@ helpers do
 		options.host_name + options.port_num + "/geoserver/wms/reflect?layers=" + layers + "&format=" + format + "&styles=" + styles + "&width=580&height=450"
 	end
 	def cat_url(item)
-		options.catalog + item
+		#options.catalog + item
 	end
 end
 

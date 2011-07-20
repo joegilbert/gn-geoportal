@@ -1,32 +1,32 @@
-set :application, "gn-geoportal"
+set :application, "geoportal"
 set :repository,  "git://github.com/joegilbert/gn-geoportal.git"
+set :domain, ""
 
-# If you have previously been relying upon the code to start, stop 
-# and restart your mongrel application, or if you rely on the database
-# migration code, please uncomment the lines you require below
+set :deploy_to, "/usr/local/projects/#{application}"
+set :user, ''
+set :runner, user
+set :run_method, :run
 
-# If you are deploying a rails app you probably need these:
-
-# load 'ext/rails-database-migrations.rb'
-# load 'ext/rails-shared-directories.rb'
-
-# There are also new utility libaries shipped with the core these 
-# include the following, please see individual files for more
-# documentation, or run `cap -vT` with the following lines commented
-# out to see what they make available.
-
-# load 'ext/spinner.rb'              # Designed for use with script/spin
-# load 'ext/passenger-mod-rails.rb'  # Restart task for use with mod_rails
-# load 'ext/web-disable-enable.rb'   # Gives you web:disable and web:enable
-
-# If you aren't deploying to /u/apps/#{application} on the target
-# servers (which is the default), you can specify the actual location
-# via the :deploy_to variable:
-# set :deploy_to, "/var/www/#{application}"
-
-# If you aren't using Subversion to manage your source code, specify
-# your SCM below:
 set :scm, :git
-# see a full list by running "gem contents capistrano | grep 'scm/'"
+set :branch, "master"
+set :deploy_via, :remote_cache
+set :copy_exclude, [".git", '.gitignore', 'README.rdoc', 'spec/*', "doc/*", "test/*"]
 
-role :web, "your web-server here"
+role :web, domain  # Your HTTP server, Apache/etc
+role :app, domain  # This may be the same as your `Web` server
+role :db,  domain  # This is where Rails migrations will run
+
+default_run_options[:pty] = true
+set :ssh_options, {:forward_agent => true}
+
+set :keep_releases, 3 
+
+namespace :deploy do
+  task :start do ; end
+  task :stop do ; end
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+end
+
+after 'deploy', 'deploy:cleanup'
