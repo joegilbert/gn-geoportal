@@ -2,21 +2,33 @@ require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
 require 'haml'
+require 'rack/csrf'
 
 # run sinatra from the lib directory
-require File.expand_path(File.dirname(__FILE__) + '/lib/sinatra/lib/sinatra')
+#require File.expand_path(File.dirname(__FILE__) + '/lib/sinatra/lib/sinatra')
 # retrieve config information
 require File.expand_path(File.dirname(__FILE__) + '/lib/config')
 # Load classes and modules
-require 'lib/geoportal.rb'
+require File.expand_path(File.dirname(__FILE__) + '/lib/geoportal.rb')
 
 # set sinatra's variables
 set :app_file, __FILE__
 set :root, File.dirname(__FILE__)
 set :views, "views"
 
+# set html output format to html5
+set :haml, :format => :html5
+
 # helpers for handlers and views
 helpers do
+  def csrf_token
+    Rack::Csrf.csrf_token(env)
+  end
+
+  def csrf_tag
+    Rack::Csrf.csrf_tag(env)
+  end
+
 	def gn_url(lang)
 		options.host_name + options.port_num + "/geonetwork/srv/" + lang
 	end

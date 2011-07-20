@@ -1,22 +1,25 @@
-!!!
-%html{html_attrs('en')}
-	%head
-		%meta{'http-equiv' => "Content-Type", :content => "text/html; charset=utf-8"}/
-		%meta{'http-equiv'=>"Content-Language", :content=>"en-us"}/
-		%title= @page_title
-		%script{:type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'}
-		%link{:href => '/styles/screen.css', :media => 'screen', :rel => 'stylesheet', :type => 'text/css'}/
-		%link{:href => '/styles/print.css', :media => 'print', :rel => 'stylesheet', :type => 'text/css'}/
-		%link{:href => "/styles/colorbox.css", :rel => "stylesheet", :type => "text/css", :media => "screen"}/
-		/[if lte IE 7]
-			%link{:href => '/styles/ie.css', :media => 'screen', :rel => 'stylesheet', :type => 'text/css'}/
-			%style
-				:sass
-					.text
-						:margin-bottom -2px !important
-	%body
-		.container
-			%h1.title.last 
-				%a{:href => '/'}
-					Geospatial Data Portal
-			=yield
+!!! 5
+/[if lt IE 7] <html lang="en" class="no-js ie6">
+/[if IE 7 ] <html lang="en" class="no-js ie7">
+/[if IE 8 ] <html lang="en" class="no-js ie8">
+/[if IE 9 ] <html lang="en" class="no-js ie9">
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+%head
+	%meta{:charset => 'utf-8'}/
+	%title= @page_title
+	%script{:type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'}
+	%link{:href => '/styles/screen.css', :media => 'screen', :rel => 'stylesheet', :type => 'text/css'}/
+	%link{:href => '/styles/print.css', :media => 'print', :rel => 'stylesheet', :type => 'text/css'}/
+	%link{:href => "/styles/colorbox.css", :rel => "stylesheet", :type => "text/css", :media => "screen"}/
+	/[if lte IE 7]
+		%link{:href => '/styles/ie.css', :media => 'screen', :rel => 'stylesheet', :type => 'text/css'}/
+		%style
+			:sass
+				.text
+					:margin-bottom -2px !important
+%body
+	.container
+		%h1.title.last 
+			%a{:href => '/'}
+				Geospatial Data Portal
+		=yield
